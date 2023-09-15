@@ -23,17 +23,17 @@
 <template>
 
 <div class="flex min-h-screen">
-    <div id="sidebar" class="bg-blue-700 p-6 duration-500" :class="width" style="position: relative;">
-        <button class="text-xl text-orange-900" @click="toggleWidth" style="position: absolute; right: -25px; top:10px">
+    <div id="sidebar" class="bg-gray-900 p-6 duration-500" :class="width" style="position: relative;">
+        <button class="text-xl text-pink-900" @click="toggleWidth" style="position: absolute; right: -25px; top:10px">
             <i class="fa-solid fa-bars"></i>
         </button>
         <div id="branding" class="flex justify-between">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxsB-zYkCr0ryubv8Rbn6o3BEJqXPiy025cQe1Ojc8UQ&s" alt="Logo"
                 class="w-[50px] h-[50px] mx-auto rounded-full object-cover" :class="size">
-            <h1 class="text-lg text-center text-blue-200 my-2 mr-5" :class="hidden">Prelim Exam</h1>
+            <h1 class="text-lg text-center text-pink-200 my-2 mr-5" :class="hidden">Clients</h1>
 
         </div>
-        <hr class="border-blue-600 my-3">
+        <hr class="border-pink-600 my-3">
 
         <MainNav :class="hidden"></MainNav>
         <ToogledNav :class="{'hidden' : !hidden}"></ToogledNav>

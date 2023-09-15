@@ -1,16 +1,35 @@
 <script setup>
 import Layout1 from "@/Layouts/Layout1.vue";
 defineProps({
-    pc_items: Array,
+    clients: Array,
 });
 import { Link } from "@inertiajs/vue3";
 </script>
 
 <template>
+    <Head title="Clients" />
     <Layout1>
-        <div class="p-8">
-            <h1 class="text-4xl mb-2 text-blue-800">
-              Items
+                <div class="">
+            <div class="">
+                <div class="">
+                    <div class="p-6 text-gray-900">
+                        <div v-for="client in clients.data" :key="client.id" style="display: inline-flex; flex-wrap: wrap;">
+                            <div class="bg-gray-800 text-white m-5 p-5 rounded-lg" style="width: 300px;">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+                                <b>Last Name: </b>{{ client.last_name }} <br>
+                                <b>First Name: </b>{{ client.first_name }} <br>
+                                <b>Address: </b>{{ client.address }} <br>
+                                <b>Phone: </b>{{ client.phone }} <br>
+                                <b>Level: </b>{{ client.level }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- <div class="p-8">
+            <h1 class="text-4xl mb-2 text-pink-800">
+              My Personal Collections
             </h1>
             <hr />
             <table class="table mt-5">
@@ -23,7 +42,7 @@ import { Link } from "@inertiajs/vue3";
                         <th>Quantity</th>
                     </tr>
                 </thead>
-                <tbody class="text-blue-900">
+                <tbody class="text-pink-900">
                     <tr v-for="pc in pc_items.data" :key="pc.id">
                         <td>{{ pc.id }}</td>
                         <td>{{ pc.product_name }}</td>
@@ -32,11 +51,11 @@ import { Link } from "@inertiajs/vue3";
                         <td>{{ pc.quantity }}</td>
                     </tr>
                 </tbody>
-            </table>
+            </table> -->
 
-            <div class="mt-5 flex items-center justify-center text-blue-800">
+            <div class="mt-5 flex items-center justify-center text-pink-800">
                 Showing
-                <strong class="relative border-4 px-2 rounded-full items-center bg-blue-600 text-blue-200 ring-1 ring-inset ring-blue-300">{{ pc_items.data.length }}</strong> entries.
+                <strong class="relative border-4 px-2 rounded-full items-center bg-pink-600 text-pink-200 ring-1 ring-inset ring-pink-300">{{ clients.data.length }}</strong> entries.
             </div>
             <div class="mt-5 flex items-center justify-center">
                 <nav
@@ -45,14 +64,14 @@ import { Link } from "@inertiajs/vue3";
                 >
                     <ul class="pagination">
                         <li
-                            v-for="page in pc_items.links"
+                            v-for="page in clients.links"
                             :key="page.url"
                             :class="{
-                                ' relative border-4 rounded-full z-10 inline-flex items-center bg-pink-100 text-blue-900 ring-1 ring-inset ring-blue-300 hover:bg-pink-50 focus:outline-offset-0':
+                                ' relative border-4 rounded-full z-10 inline-flex items-center bg-pink-100 text-pink-900 ring-1 ring-inset ring-pink-300 hover:bg-pink-50 focus:outline-offset-0':
                                     !page.active && page.label !== 'Previous',
-                                ' relative border-4 z-10 rounded-full inline-flex items-center text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600':
+                                ' relative border-4 z-10 rounded-full inline-flex items-center text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600':
                                     page.active,
-                                'opacity-50 border-4 rounded-full cursor-not-allowed relative z-10 inline-flex items-center px-4 py-2 text-sm font-semibold text-blue-300 ring-1 ring-inset ring-blue-300':
+                                'opacity-50 border-4 rounded-full cursor-not-allowed relative z-10 inline-flex items-center px-4 py-2 text-sm font-semibold text-pink-300 ring-1 ring-inset ring-pink-300':
                                     !page.url && page.label === 'Previous',
                             }"
                         >
@@ -60,12 +79,12 @@ import { Link } from "@inertiajs/vue3";
                                 v-if="page.url"
                                 :href="page.url"
                                 :class="{
-                                    'cursor-pointer border-4 rounded-full relative z-10 inline-flex items-center px-4 py-2 text-sm font-semibold text-blue-900 ring-1 ring-inset ring-blue-300 hover:bg-blue-200 focus:outline-offset-0':
+                                    'cursor-pointer border-4 rounded-full relative z-10 inline-flex items-center px-4 py-2 text-sm font-semibold text-pink-900 ring-1 ring-inset ring-pink-300 hover:bg-pink-200 focus:outline-offset-0':
                                         !page.active &&
                                         page.label !== 'Previous',
-                                    'cursor-pointer border-4 rounded-full relative z-10 inline-flex items-center bg-blue-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600':
+                                    'cursor-pointer border-4 rounded-full relative z-10 inline-flex items-center bg-pink-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600':
                                         page.active,
-                                    'opacity-50 cursor-not-allowed border-4 rounded-full relative z-10 inline-flex items-center px-4 py-2 text-sm font-semibold text-blue-300 ring-1 ring-inset ring-blue-300':
+                                    'opacity-50 cursor-not-allowed border-4 rounded-full relative z-10 inline-flex items-center px-4 py-2 text-sm font-semibold text-pink-300 ring-1 ring-inset ring-pink-300':
                                         !page.url && page.label === 'Previous',
                                 }"
                             >
