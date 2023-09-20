@@ -12,9 +12,9 @@ import { Link } from "@inertiajs/vue3";
                 <div class="">
             <div class="">
                 <div class="">
-                    <div class="p-6 text-gray-900">
+                    <div class="p-6 text-pink-500">
                         <div v-for="client in clients.data" :key="client.id" style="display: inline-flex; flex-wrap: wrap;">
-                            <div class="bg-gray-800 text-white m-5 p-5 rounded-lg" style="width: 300px;">
+                            <div class="bg-gray-500 text-white m-5 p-5 rounded-lg" style="width: 300px;">
                                 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
                                 <b>Last Name: </b>{{ client.last_name }} <br>
                                 <b>First Name: </b>{{ client.first_name }} <br>

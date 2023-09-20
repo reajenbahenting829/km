@@ -18,9 +18,9 @@
          <Link :href="route('profile.edit')" :active="route().current('clients')">
             <i class="fa-solid fa-user"></i> <span :hidden="hidden">Profile</span>
         </Link> -->
-     <Link href="#">
+     <Link href="/about">
           <i class="fa-solid fa-user"></i>  <span>About us</span></Link>
-    <Link href="#">
+    <Link href="/contact">
         <i class="fa-solid fa-phone-volume"></i> <span>Contact Us</span></Link>
 
     <Link :href="route('logout')" method="post" >

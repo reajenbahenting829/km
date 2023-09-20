@@ -28,9 +28,9 @@
             <i class="fa-solid fa-bars"></i>
         </button>
         <div id="branding" class="flex justify-between">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxsB-zYkCr0ryubv8Rbn6o3BEJqXPiy025cQe1Ojc8UQ&s" alt="Logo"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaOj7go4GD_h-YcVUyJmcTKQrEXLwPN6Di2ZRnJtib9A&s" alt="Logo"
                 class="w-[50px] h-[50px] mx-auto rounded-full object-cover" :class="size">
-            <h1 class="text-lg text-center text-pink-200 my-2 mr-5" :class="hidden">Clients</h1>
+            <h1 class="text-lg text-center text-pink-200 my-2 mr-5" :class="hidden">Rea Jen Bahenting</h1>
 
         </div>
         <hr class="border-pink-600 my-3">

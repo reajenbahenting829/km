@@ -6,7 +6,7 @@ import Layout1 from '@/Layouts/Layout1.vue'
 <template>
     <Layout1>
         <div class="p-8">
-            <h1 class="text-4xl">Home</h1>
+            <h1 class="text-4xl">Dashboard</h1>
             <p>
                 Vivamus vel tempus nulla. Pellentesque pretium in arcu et vestibulum. Morbi mattis rhoncus nisl, non laoreet
                 sapien facilisis a. Integer non augue vel enim ornare malesuada. Pellentesque ut felis sodales, volutpat
